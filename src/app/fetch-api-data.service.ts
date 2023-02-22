@@ -9,21 +9,21 @@ import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 //Declaring the api url that will provide data for the client app
-const apiUrl = 'https://movieapi-production-1d07.up.railway.app/';
+const apiUrl = 'https://movieapi-production-1d07.up.railway.app';
 @Injectable({
   providedIn: 'root',
 })
-export class UserRegistrationService {
+export class FetchApiDataService {
   constructor(private http: HttpClient) {}
 
-  public userRegistration(userDetails: any): Observable<any> {
+  userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
     return this.http
       .post(`${apiUrl}/users`, userDetails)
       .pipe(catchError(this.handleError));
   }
 
-  userlogin(userDetails: any): Observable<any> {
+  userLogin(userDetails: any): Observable<any> {
     console.log(userDetails);
     return this.http
       .post(`${apiUrl}/login`, userDetails)
