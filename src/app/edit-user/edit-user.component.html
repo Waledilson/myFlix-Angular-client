@@ -1,0 +1,66 @@
+<div class="edit-user-page">
+  <mat-card class="edit-user-card">
+    <mat-card-header class="edit-user-header">
+      <mat-card-title>Edit {{ loggedUser.Username }}'s Profile</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="edit-user-content">
+      <form>
+        <mat-form-field>
+          <mat-label class="input-field">
+            <input
+              matInput
+              [(ngModel)]="loggedUser.Username"
+              type="text"
+              value="{{ loggedUser.Username }}"
+              name="Username"
+              required
+            />
+          </mat-label>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label class="input-field">
+            <input
+              matInput
+              [(ngModel)]="loggedUser.Password"
+              type="password"
+              name="Password"
+              required
+            />
+          </mat-label>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label class="input-field">
+            <input
+              matInput
+              [(ngModel)]="loggedUser.Email"
+              type="email"
+              value="{{ loggedUser.Email }}"
+              name="Password"
+              required
+            />
+          </mat-label>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label class="input-field">
+            <input
+              matInput
+              [(ngModel)]="loggedUser.Birthday"
+              type="date"
+              name="Birthday"
+              required
+            />
+          </mat-label>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions class="edit-actions">
+      <button mat-raised-button class="edit-button" (click)="updateUser()">
+        <mat-icon>done_outline</mat-icon>
+        Update Your Profile
+      </button>
+      <button mat-stroked-button class="edit-close" mat-dialog-close>
+        Close
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
