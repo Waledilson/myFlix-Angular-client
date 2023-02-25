@@ -1,0 +1,37 @@
+$orange: orange;
+$blue: lightblue;
+$background: #303030;
+$background-dark: #151515;
+
+* {
+  box-sizing: border-box;
+}
+.main-page {
+  margin-top: 100px;
+  background-color: $background;
+  flex-direction: column;
+  align-items: center;
+  padding: 3% 3%;
+}
+.welcome-card {
+  margin: 25vh auto auto auto;
+  background-color: $background-dark;
+  width: 475px;
+  height: 200px;
+}
+mat-card-title {
+  color: $orange;
+  justify-content: center;
+  display: flex;
+  font-weight: 300;
+  font-size: 30pt;
+}
+mat-card-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+button {
+  margin-bottom: 5%;
+  font-size: 15pt;
+  color: $blue;
+}

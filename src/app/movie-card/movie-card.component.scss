@@ -1,4 +1,56 @@
+$orange: orange;
+$blue: lightblue;
+$background: #303030;
+
+.movie-view {
+  display: grid;
+  grid-template-columns: (1fr 1fr 1fr);
+  // display: flex;
+  // flex-wrap: wrap;
+  // flex-wrap: wrap;
+  // justify-content: evenly-spaced;
+  // flex: 1 1 auto;
+  padding-top: 60px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+
 .image {
-  height: 300px;
-  width: 200px;
+  align-items: center;
+  height: 375px;
+  width: 265px;
+}
+.movie-card {
+  background-color: $background;
+  display: grid;
+  flex: 1 1 auto;
+}
+mat-card-title {
+  font-size: x-large;
+  color: orange;
+  margin-bottom: 10px;
+}
+mat-card-subtitle {
+  font-size: medium;
+  color: lightblue;
+  margin-bottom: 35px;
+}
+mat-card:nth-child(8)
+// mat-card:nth-child(6)
+{
+  mat-card-subtitle {
+    margin-bottom: 4px;
+  }
+}
+// mat-card:nth-child(6) {
+//   mat-card-subtitle {
+//     margin-bottom: 4px;
+//   }
+// }
+.fav-button,
+.movie-card-button {
+  color: lightblue;
 }
