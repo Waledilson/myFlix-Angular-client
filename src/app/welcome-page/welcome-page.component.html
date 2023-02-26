@@ -1,22 +1,36 @@
+<!-- <app-navbar></app-navbar> -->
 <div class="main-page">
-  <h1>Welcome to myFlix!</h1>
-  <button
-    mat-raised-button
-    (click)="openUserRegistrationDialog()"
-    style="margin-right: 10px"
-    color="primary"
-  >
-    Sign Up
-  </button>
-  <button
-    mat-raised-button
-    color="primary"
-    (click)="openUserLoginDialog()"
-    style="margin-right: 10px"
-  >
-    Login
-  </button>
-  <button mat-raised-button color="primary" (click)="openMoviesDialog()">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap"
+    rel="stylesheet"
+  /> -->
+
+  <mat-card class="welcome-card">
+    <mat-card-header>
+      <mat-card-title>Welcome to Martini Shot</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <button
+        class="glow"
+        mat-button
+        (click)="openUserRegistrationDialog()"
+        style="color: lightblue"
+      >
+        Sign Up
+      </button>
+      <button
+        class="glow"
+        mat-button
+        (click)="openUserLoginDialog()"
+        style="color: lightblue"
+      >
+        Login
+      </button>
+      <!-- <button mat-button style="color: lightblue" (click)="openMoviesDialog()">
     All Movies
-  </button>
+  </button> -->
+    </mat-card-actions>
+  </mat-card>
 </div>

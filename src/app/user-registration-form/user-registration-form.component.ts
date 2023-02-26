@@ -28,7 +28,7 @@ export class UserRegistrationFormComponent implements OnInit {
       (result) => {
         console.log(result);
         this.dialogRef.close();
-        this.snackBar.open(result, 'OK', {
+        this.snackBar.open('It Worked!', 'OK', {
           duration: 2000,
         });
       },

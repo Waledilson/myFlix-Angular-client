@@ -1,17 +1,67 @@
-<div style="display: flex">
-  <mat-card *ngFor="let movie of movies" style="flex: 1 1 auto">
+<app-navbar></app-navbar>
+<div class="movie-view">
+  <mat-card class="movie-card" *ngFor="let movie of movies">
     <mat-card-header>
-      <mat-card-title>{{ movie.Title }}</mat-card-title>
+      <mat-card-title class="card-title">{{ movie.Title }}</mat-card-title>
       <mat-card-subtitle
         >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
       >
     </mat-card-header>
-    <img class="image" src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
+    <img
+      class="image"
+      style="margin-left: 40px"
+      src="{{ movie.ImagePath }}"
+      alt="{{ movie.Title }}"
+    />
     <mat-card-actions>
-      <button mat-button color="primary">Genre</button>
-      <button mat-button color="primary">Director</button>
-      <button mat-button color="primary">Synopsis</button>
-      <mat-icon>favorite_border</mat-icon>
+      <button
+        mat-button
+        class="movie-card-button"
+        (click)="openGenre(movie.Genre.Name, movie.Genre.Description)"
+        style="color: lightblue"
+      >
+        Genre
+      </button>
+      <button
+        mat-button
+        class="movie-card-button"
+        (click)="
+          openDirector(
+            movie.Director.Name,
+            movie.Director.Bio,
+            movie.Director.Birth
+          )
+        "
+        style="color: lightblue"
+      >
+        Director
+      </button>
+      <button
+        mat-button
+        class="movie-card-button"
+        (click)="openSynopsis(movie.Title, movie.Description)"
+        style="color: lightblue"
+      >
+        Synopsis
+      </button>
+      <button
+        mat-button
+        class="movie-card-button"
+        *ngIf="!isFav(movie._id)"
+        (click)="addFav(movie._id)"
+        style="color: lightblue"
+      >
+        <mat-icon>favorite_border</mat-icon>
+      </button>
+      <button
+        mat-button
+        class="fav-icon"
+        *ngIf="isFav(movie._id)"
+        (click)="delFav(movie._id)"
+        style="color: lightblue"
+      >
+        <mat-icon>favorite</mat-icon>
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>
