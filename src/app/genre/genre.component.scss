@@ -1,0 +1,22 @@
+$orange: orange;
+$blue: lightblue;
+$background: #303030;
+$background-dark: #151515;
+
+.genre-dialog {
+  border: 5px solid $blue;
+  background-color: $background-dark;
+}
+.genre-dialog-title {
+  color: $orange;
+  padding: 15px;
+}
+.genre-first {
+  color: $orange;
+}
+.genre-second {
+  color: $blue;
+}
+.genre-close-button {
+  color: $orange;
+}

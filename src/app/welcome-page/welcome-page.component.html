@@ -1,11 +1,19 @@
 <!-- <app-navbar></app-navbar> -->
 <div class="main-page">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap"
+    rel="stylesheet"
+  /> -->
+
   <mat-card class="welcome-card">
     <mat-card-header>
       <mat-card-title>Welcome to Martini Shot</mat-card-title>
     </mat-card-header>
     <mat-card-actions>
       <button
+        class="glow"
         mat-button
         (click)="openUserRegistrationDialog()"
         style="color: lightblue"
@@ -13,6 +21,7 @@
         Sign Up
       </button>
       <button
+        class="glow"
         mat-button
         (click)="openUserLoginDialog()"
         style="color: lightblue"

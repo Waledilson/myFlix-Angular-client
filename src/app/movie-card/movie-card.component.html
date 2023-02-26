@@ -18,7 +18,7 @@
         mat-button
         class="movie-card-button"
         (click)="openGenre(movie.Genre.Name, movie.Genre.Description)"
-        color="primary"
+        style="color: lightblue"
       >
         Genre
       </button>
@@ -32,7 +32,7 @@
             movie.Director.Birth
           )
         "
-        color="primary"
+        style="color: lightblue"
       >
         Director
       </button>
@@ -40,25 +40,25 @@
         mat-button
         class="movie-card-button"
         (click)="openSynopsis(movie.Title, movie.Description)"
-        color="primary"
+        style="color: lightblue"
       >
         Synopsis
       </button>
       <button
         mat-button
-        class="fav-button"
+        class="movie-card-button"
         *ngIf="!isFav(movie._id)"
         (click)="addFav(movie._id)"
-        color="primary"
+        style="color: lightblue"
       >
         <mat-icon>favorite_border</mat-icon>
       </button>
       <button
         mat-button
-        class="fav-button"
+        class="fav-icon"
         *ngIf="isFav(movie._id)"
         (click)="delFav(movie._id)"
-        color="primary"
+        style="color: lightblue"
       >
         <mat-icon>favorite</mat-icon>
       </button>

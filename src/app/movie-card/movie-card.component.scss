@@ -1,15 +1,11 @@
 $orange: orange;
 $blue: lightblue;
 $background: #303030;
+$background-dark: #151515;
 
 .movie-view {
   display: grid;
   grid-template-columns: (1fr 1fr 1fr);
-  // display: flex;
-  // flex-wrap: wrap;
-  // flex-wrap: wrap;
-  // justify-content: evenly-spaced;
-  // flex: 1 1 auto;
   padding-top: 60px;
 }
 @media (max-width: 979px) {
@@ -24,6 +20,7 @@ $background: #303030;
   width: 265px;
 }
 .movie-card {
+  border: none;
   background-color: $background;
   display: grid;
   flex: 1 1 auto;
@@ -50,7 +47,13 @@ mat-card:nth-child(8)
 //     margin-bottom: 4px;
 //   }
 // }
-.fav-button,
-.movie-card-button {
-  color: lightblue;
+
+.fav-icon .movie-card-button {
+  color: #add8e6;
+}
+
+.movie-card-button:hover {
+  text-shadow: 4px 4px 20px #65dff4;
+
+  filter: dropshadow(color=#add8e6, offx=2, offy=2);
 }
