@@ -23,6 +23,10 @@ export class UserRegistrationFormComponent implements OnInit {
    * @function registerUser
    */
 
+  /**
+   * box with input fields for new user to input their name, password, email and date of birth for registration
+   * @returns new user information object in json
+   */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe(
       (result) => {

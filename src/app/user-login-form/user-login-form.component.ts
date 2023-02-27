@@ -20,6 +20,10 @@ export class UserLoginFormComponent implements OnInit {
   ) {}
   ngOnInit(): void {}
 
+  /**
+   * opens box with input fields for the user to log in
+   * @returns user information in json and directs user to movie page.
+   */
   logInUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
       (result) => {

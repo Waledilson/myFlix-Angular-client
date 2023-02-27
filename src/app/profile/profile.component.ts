@@ -24,6 +24,10 @@ export class ProfileComponent implements OnInit {
     this.getUser();
   }
 
+  /**
+   * gets user's information
+   * @returns user's info including name, password, email and date of birth in json
+   */
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
       this.user = resp;
@@ -32,12 +36,19 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * opens box with input fields for user to update their information
+   */
   openEditUser(): void {
     this.dialog.open(EditUserComponent, {
       width: '450px',
     });
   }
 
+  /**
+   * deletes user's account
+   * @returns nothing. upon deletion, the user is sent back to the welcome screen to either sign up or log in
+   */
   deleteAccount(): void {
     if (confirm('Are you sure you want to permanently delete this account?')) {
       this.router.navigate(['welcome']).then(() => {

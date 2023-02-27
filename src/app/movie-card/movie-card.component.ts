@@ -26,6 +26,10 @@ export class MovieCardComponent {
     this.getFavorites();
   }
 
+  /**
+   * gets all movies from api
+   * @returns all movie arrays in json
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -33,6 +37,11 @@ export class MovieCardComponent {
       return this.movies;
     });
   }
+
+  /**
+   * gets user's favorite movies
+   * @returns favorite movies in json
+   */
   getFavorites(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
       this.favorites = resp.FavoriteMovies;
@@ -41,10 +50,20 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * checks to see if movie is already in user's favorite movie list
+   * @param _id
+   * @returns boolean yes or no
+   */
   isFav(_id: string): boolean {
     return this.favorites.includes(_id);
   }
 
+  /**
+   * adds favorite movie to user's favorite movie list
+   * @param _id
+   * @returns user's updated favorite movie list
+   */
   addFav(_id: string): void {
     this.fetchApiData.addToFavorites(_id).subscribe((result) => {
       console.log(result);
@@ -55,6 +74,11 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * deletes favorite movie from user's favorite movie list
+   * @param _id
+   * @returns user's updated favorite movie list
+   */
   delFav(_id: string): void {
     console.log(_id);
     this.fetchApiData.deleteFromFavorites(_id).subscribe((result) => {
@@ -66,6 +90,11 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * opens angular material card with movie title and description
+   * @param title
+   * @param description
+   */
   openSynopsis(title: string, description: string): void {
     this.dialog.open(SynopsisComponent, {
       data: {
@@ -76,6 +105,12 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * opens angular material card with director's name, birth year and bio
+   * @param name
+   * @param bio
+   * @param birth
+   */
   openDirector(name: string, bio: string, birth: string): void {
     this.dialog.open(DirectorComponent, {
       data: {
@@ -87,6 +122,11 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * opens angular material card with genre's name and description
+   * @param name
+   * @param description
+   */
   openGenre(name: string, description: string): void {
     this.dialog.open(GenreComponent, {
       data: {

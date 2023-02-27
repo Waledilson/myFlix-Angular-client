@@ -11,10 +11,17 @@ import { MatDialog } from '@angular/material/dialog';
 export class NavbarComponent {
   constructor(public router: Router, public dialog: MatDialog) {}
 
+  /**
+   * logs user out. clears local storage holding user's credentials
+   */
   logout(): void {
     this.router.navigate(['welcome']);
     localStorage.clear();
   }
+
+  /**
+   * opens movie dialog box that i dont think i am actually using anymore
+   */
   openMoviesDialog(): void {
     this.dialog.open(MovieCardComponent, {
       width: '500px',
