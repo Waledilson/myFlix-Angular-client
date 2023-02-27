@@ -34,10 +34,10 @@ CSS
 Angular
 Angular Material
 
-<img src="dist/my-flix-angular-client/assets/myflix-angular-ss1.png">
+<img src="src/assets/myflix-angular-ss1.png">
 <br>
-<img src="dist/my-flix-angular-client/assets/myflix-angular-ss2.png">
+<img src="src/assets/myflix-angular-ss2.png">
 <br>
-<img src="dist/my-flix-angular-client/assets/myflix-angular-ss3.png">
+<img src="src/assets/myflix-angular-ss3.png">
 <br>
-<img src="dist/my-flix-angular-client/assets/myflix-angular-ss4.png">
+<img src="src/assets/myflix-angular-ss4.png">
