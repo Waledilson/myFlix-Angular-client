@@ -25,4 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
 # movie-api-angular
+
+Thi client side of this app was created with:
+HTML
+CSS
+Angular
+Angular Material
+
+<img src="dist/my-flix-angular-client/assets/myflix-angular-ss1.png">
+<br>
+<img src="dist/my-flix-angular-client/assets/myflix-angular-ss2.png">
+<br>
+<img src="dist/my-flix-angular-client/assets/myflix-angular-ss3.png">
+<br>
+<img src="dist/my-flix-angular-client/assets/myflix-angular-ss4.png">
