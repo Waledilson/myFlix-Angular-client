@@ -202,7 +202,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * @service DELETE user from database
+   * @service DELETE user from database.
    * @returns nothing
    */
   deleteUser(): Observable<any> {
